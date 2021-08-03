@@ -51,8 +51,25 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  if(!Array.isArray(array)) {
+    console.log(`Error: no array found`); //better safe than sorry
+    return undefined;
+  }
+  else if(array.length === 0) {
+    return undefined;
+  }
+  else { //Should I pop the last item or simply return the last item? Both are included for safety
+    return array[array.length - 1];
+  }
+  //else {
+  //  return array.pop();
+  //}
 }
+console.log(getLast("apple"));
+let arr1 = [];
+let arr2 = [1, 2, 3, 4, 5, 6];
+console.log(getLast(arr1));
+console.log(getLast(arr2));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
