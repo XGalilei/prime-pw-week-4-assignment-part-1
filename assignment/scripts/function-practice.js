@@ -82,8 +82,8 @@ function find( value, array ){
   return false;
 }
 let arr3 = [1, 4, 9, 16, 25, 36];
-console.log(find(2, arr3));
-console.log(find(9, arr3));
+console.log("find - should be false", find(2, arr3));
+console.log('find - should be true', find(9, arr3));
 
 // ----------------------
 // Stretch Goals
@@ -91,7 +91,7 @@ console.log(find(9, arr3));
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  return (string.charAt(0) === letter);
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
