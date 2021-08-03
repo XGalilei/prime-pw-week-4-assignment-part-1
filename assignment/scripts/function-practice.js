@@ -113,14 +113,26 @@ console.log('sumAll - should return 6', sumAll([1, 2, 3]));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 function sumPositive(array) {
-
+  let array2 = [];
+  for(val of array) {
+    if(val > 0) {
+      array2.push(val);
+    }
+  }
+  return array2;
 }
+let arr4 = [0, -1, -3, -6];
+let arr5 = [1, -2, 3, -4, 5, -6];
+console.log("sumPositive - should return empty array", sumPositive(arr4), arr4); //include array in console to ensure no changes made to base array
+console.log("sumPositive - should return [1, 3, 5]", sumPositive(arr5), arr5);
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
 function triangularNumber(num) {
+  //https://edabit.com/challenge/RMZiERz2cbjmbXruY
+  
   //If you had an equilateral triangle composed of dots, and each side of the triangle
   //is n dots long, then the triangular number would represent the total number of dots
   //in the triangle.
