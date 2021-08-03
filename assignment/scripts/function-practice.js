@@ -18,20 +18,20 @@ function helloName( name ) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log(helloName("Ian"));
+console.log(`helloName - ${helloName("Ian")}`);
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
   return firstNumber + secondNumber;
 }
-console.log(addNumbers(20, 21));
+console.log("addNumbers 20 and 21 - ", addNumbers(20, 21));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(firstNumber, secondNumber, thirdNumber){
   return firstNumber * secondNumber * thirdNumber;
 }
-console.log(multiplyThree(1,2,3));
+console.log("multiplyThree 2 3 and 4 -", multiplyThree(2,3,4));
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
@@ -51,8 +51,7 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-  if(!Array.isArray(array)) {
-    console.log(`Error: no array found`); //better safe than sorry
+  if(!Array.isArray(array)) { //better safe than sorry
     return undefined;
   }
   else if(array.length === 0) {
@@ -65,18 +64,26 @@ function getLast( array ) {
   //  return array.pop();
   //}
 }
-console.log(getLast("apple"));
+console.log("getLast - should be undefined", getLast("apple"));
 let arr1 = [];
 let arr2 = [1, 2, 3, 4, 5, 6];
-console.log(getLast(arr1));
-console.log(getLast(arr2));
+console.log("getLast - should be undefined", getLast(arr1));
+console.log("getLast = should be 6", getLast(arr2));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
-
+  for(val of array) {
+    if(value === val) {
+      return true;
+    }
+  }
+  return false;
 }
+let arr3 = [1, 4, 9, 16, 25, 36];
+console.log(find(2, arr3));
+console.log(find(9, arr3));
 
 // ----------------------
 // Stretch Goals
