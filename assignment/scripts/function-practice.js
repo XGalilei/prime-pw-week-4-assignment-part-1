@@ -100,7 +100,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-  
+
   for(i in array) { //logic failed with a for of loop, curious as to why
     sum += array[i];
   }
@@ -120,3 +120,13 @@ function sumPositive(array) {
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+function triangularNumber(num) {
+  //If you had an equilateral triangle composed of dots, and each side of the triangle
+  //is n dots long, then the triangular number would represent the total number of dots
+  //in the triangle.
+
+  //I'm familiar with the sequence: the formula to determine the triangularNumber is
+  // (n * (n + 1)) / 2, so the implementation is quite simple.
+  return (num * (num + 1)) / 2;
+}
+console.log('triangularNumber - should return 55', triangularNumber(10));
