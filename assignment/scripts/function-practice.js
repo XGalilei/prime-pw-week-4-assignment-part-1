@@ -31,7 +31,7 @@ console.log(addNumbers(20, 21));
 function multiplyThree(firstNumber, secondNumber, thirdNumber){
   return firstNumber * secondNumber * thirdNumber;
 }
-console.log(1,2,3);
+console.log(multiplyThree(1,2,3));
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
